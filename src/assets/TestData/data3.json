@@ -1,0 +1,9 @@
+{
+    "Data": [
+        {"label": "AAA", "val": 10},
+        {"label": "BBB", "val": 10},
+        {"label": "CCC", "val": 10},
+        {"label": "DDD", "val": 10},
+        {"label": "EEE", "val": 10}
+    ]
+}

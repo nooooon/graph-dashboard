@@ -1,0 +1,41 @@
+@import "../assets/sass/foundation/normalize.scss";
+@import "../assets/sass/foundation/setting.scss";
+
+
+body{
+  background: #c5c5c5;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.l-block-wrapper {
+  display: flex;
+}
+
+.c-block {
+  background: #FFF;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  min-height: 300px;
+  padding: 30px;
+  width: 50%;
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.dot {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #ffab00;
+  stroke-width: 3;
+  &:hover {
+    fill: #ffab00;
+    transition: all 0.3s;
+    stroke-width: 6;
+  }
+}
