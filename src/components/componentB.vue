@@ -134,7 +134,7 @@ export default class ComponentB extends Vue {
     .outerRadius(this.radius);
 
   updateGraph() {
-    let newGraphData = this.pie(this.graphParam["Data"]);
+    let newGraphData = this.pie(this.graphParam["Data"]["Data"]);
     this.pieGroup
       .data(newGraphData)
       // .exit().remove()

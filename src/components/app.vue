@@ -4,7 +4,8 @@
 
   <div class="l-block-wrapper">
     <componentA @graph-data="graphData" class="c-block"></componentA>
-    <componentB :graph-param="graphParam" class="c-block" ref="graph"></componentB>
+    <componentB :graph-param="graphParam" class="c-block"></componentB>
+    <componentC :graph-param="graphParam" class="c-block"></componentC>
   </div>
 </div>
 </template>
@@ -16,6 +17,7 @@ import Component from 'vue-class-component';
 
 import componentA from '../components/componentA.vue';
 import componentB from '../components/componentB.vue';
+import componentC from '../components/componentC.vue';
 
 @Component({
   props   : {
@@ -38,7 +40,6 @@ import componentB from '../components/componentB.vue';
   },
   mounted: function () {
     console.log("E:mounted");
-          this.localFunc();
   },
   beforeUpdate: function () {
     console.log("E:beforeUpdate");
@@ -57,35 +58,35 @@ import componentB from '../components/componentB.vue';
   components: {
     'componentA': componentA,
     'componentB': componentB,
+    'componentC': componentC,
   },
   data: function () {
     return {
-      state: store.state,
-      // graphParam: {}
+      // state: store.state,
     }
   }
 })
-export default class App2 extends Vue {
+export default class App extends Vue {
 
   graphParam:Object = {}
 
   graphData(data) {
-    console.log("App", data.Data);
-    this.graphParam = {Data: data.Data};
+    console.log("App", data);
+    this.graphParam = {Data: data};
   }
 }
 
-const store = {
-  state: {
-    data: ""
-  },
-  setData(d) {
-    this.state.data = d;
-  },
-  clearData() {
-    this.state.data = null;
-  }
-}
+// const store = {
+//   state: {
+//     data: ""
+//   },
+//   setData(d) {
+//     this.state.data = d;
+//   },
+//   clearData() {
+//     this.state.data = null;
+//   }
+// }
 
 
 

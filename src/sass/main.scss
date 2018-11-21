@@ -12,6 +12,7 @@ h2 {
 
 .l-block-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .c-block {
@@ -38,4 +39,10 @@ h2 {
     transition: all 0.3s;
     stroke-width: 6;
   }
+}
+
+.line {
+  fill: none;
+  stroke: #ffab00;
+  stroke-width: 3;
 }

@@ -111,8 +111,7 @@ const axios = require('axios');
   }
 
 })
-export default class App3 extends Vue {
-  private dataSet: Object;
+export default class ComponentA extends Vue {
   private g;
   private width:number = 300;
   private height:number = 300;
